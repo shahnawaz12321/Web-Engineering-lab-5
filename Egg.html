@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> The Egg. </title>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+<body background="grass.jpg">
+<div id ="div1">
+<img src= "egg.png" id = "egg">
+<input type = "button" id = "button1" value = "bounce" onclick = "Jump();">
+<input type = "button" id = "button2" value = "down" onclick = "Down();">
+<input type = "button" id = "button3" value = "left" onclick = "Left();">
+<input type = "button" id = "button4" value = "right" onclick = "Right();">
+</div>
+<script>
+
+
+
+function Jump() {
+  var elem = document.getElementById("egg");
+  var pos = 200;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if (pos == 0) {
+        pos++;
+        elem.style.top = pos + 'px';
+
+      }
+     else {
+      pos--;
+      elem.style.top = pos + 'px';
+    }
+  }
+}
+
+function Down() {
+  var elem = document.getElementById("egg");
+  var pos = 200;
+
+  var id = setInterval(frame, 1);
+
+  function frame() {
+
+      pos +=20;
+      elem.style.top = pos + 'px';
+      clearInterval(id);
+    }
+  }
+
+function Left() {
+  var elem = document.getElementById("egg");
+  var pos = 600;
+  var id = setInterval(frame, 1);
+  function frame() {
+    pos -= 20;
+    elem.style.left = pos + 'px';
+    clearInterval(id);
+    }
+  }
+
+function Right() {
+  var elem = document.getElementById("egg");
+  var pos = 600;
+  var id = setInterval(frame, 1);
+  function frame() {
+    pos += 20;
+    elem.style.left = pos + 'px';
+    clearInterval(id);
+    }
+  }
+
+</script>
+</body>

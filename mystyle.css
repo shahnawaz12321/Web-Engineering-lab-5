@@ -1,0 +1,16 @@
+#div1 {
+	position: absolute;
+	height: 350px;
+	width: 1366px;
+	left: 35px;
+	top: 200px;
+}
+
+#egg {
+	height: 150px;
+	width: 115px;
+	position: absolute;
+	top: 198px;
+	left: 600px;
+
+}
